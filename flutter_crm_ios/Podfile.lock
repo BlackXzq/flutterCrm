@@ -1,0 +1,95 @@
+PODS:
+  - aj_flutter_plugin (0.0.1):
+    - Flutter
+  - amap_base_location (0.1.8):
+    - AMapLocation
+    - Flutter
+    - MJExtension
+  - AMapFoundation (1.5.6)
+  - AMapLocation (2.6.2):
+    - AMapFoundation (~> 1.4)
+  - connectivity (0.0.1):
+    - Flutter
+    - Reachability
+  - Flutter (1.0.0)
+  - flutter_aj_qrscan (0.0.1):
+    - Flutter
+    - MTBBarcodeScanner
+  - FlutterPluginRegistrant (0.0.1):
+    - aj_flutter_plugin
+    - amap_base_location
+    - connectivity
+    - Flutter
+    - flutter_aj_qrscan
+    - keyboard_visibility
+    - path_provider
+    - shared_preferences
+  - keyboard_visibility (0.5.0):
+    - Flutter
+    - Reachability
+  - MJExtension (3.0.17)
+  - MTBBarcodeScanner (5.0.11)
+  - path_provider (0.0.1):
+    - Flutter
+  - Reachability (3.2)
+  - shared_preferences (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - aj_flutter_plugin (from `../crm_app/my_flutter/.ios/Flutter/.symlinks/aj_flutter_plugin/ios`)
+  - amap_base_location (from `../crm_app/my_flutter/.ios/Flutter/.symlinks/amap_base_location/ios`)
+  - connectivity (from `../crm_app/my_flutter/.ios/Flutter/.symlinks/connectivity/ios`)
+  - Flutter (from `../crm_app/my_flutter/.ios/Flutter/engine`)
+  - flutter_aj_qrscan (from `../crm_app/my_flutter/.ios/Flutter/.symlinks/flutter_aj_qrscan/ios`)
+  - FlutterPluginRegistrant (from `../crm_app/my_flutter/.ios/Flutter/FlutterPluginRegistrant`)
+  - keyboard_visibility (from `../crm_app/my_flutter/.ios/Flutter/.symlinks/keyboard_visibility/ios`)
+  - path_provider (from `../crm_app/my_flutter/.ios/Flutter/.symlinks/path_provider/ios`)
+  - shared_preferences (from `../crm_app/my_flutter/.ios/Flutter/.symlinks/shared_preferences/ios`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AMapFoundation
+    - AMapLocation
+    - MJExtension
+    - MTBBarcodeScanner
+    - Reachability
+
+EXTERNAL SOURCES:
+  aj_flutter_plugin:
+    :path: "../crm_app/my_flutter/.ios/Flutter/.symlinks/aj_flutter_plugin/ios"
+  amap_base_location:
+    :path: "../crm_app/my_flutter/.ios/Flutter/.symlinks/amap_base_location/ios"
+  connectivity:
+    :path: "../crm_app/my_flutter/.ios/Flutter/.symlinks/connectivity/ios"
+  Flutter:
+    :path: "../crm_app/my_flutter/.ios/Flutter/engine"
+  flutter_aj_qrscan:
+    :path: "../crm_app/my_flutter/.ios/Flutter/.symlinks/flutter_aj_qrscan/ios"
+  FlutterPluginRegistrant:
+    :path: "../crm_app/my_flutter/.ios/Flutter/FlutterPluginRegistrant"
+  keyboard_visibility:
+    :path: "../crm_app/my_flutter/.ios/Flutter/.symlinks/keyboard_visibility/ios"
+  path_provider:
+    :path: "../crm_app/my_flutter/.ios/Flutter/.symlinks/path_provider/ios"
+  shared_preferences:
+    :path: "../crm_app/my_flutter/.ios/Flutter/.symlinks/shared_preferences/ios"
+
+SPEC CHECKSUMS:
+  aj_flutter_plugin: 4518490dea810739d05b7246a87eec3449e0b04d
+  amap_base_location: 755c35d1f37174a33351720d7dfd8bbe56ddc34d
+  AMapFoundation: 20fce2a12cd152e1092afdd04379cdac21932185
+  AMapLocation: 89a7e4eb6040d32ba73c77a4966ecc66e46aa7c3
+  connectivity: c72716e202a1225ec4810740d5cb56b8ae3bf4cc
+  Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
+  flutter_aj_qrscan: 7403ff1102087dc0fbfc21947684b49333c83a00
+  FlutterPluginRegistrant: 0e81efc0cd1567631506b1aae91d2bab9711b330
+  keyboard_visibility: 96a24de806fe6823c3ad956c01ba2ec6d056616f
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb
+  path_provider: f96fff6166a8867510d2c25fdcc346327cc4b259
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  shared_preferences: 1feebfa37bb57264736e16865e7ffae7fc99b523
+
+PODFILE CHECKSUM: 32a1a4f3e794a09cec7548ad8ff5e0d8b83b6a88
+
+COCOAPODS: 1.6.1

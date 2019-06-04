@@ -1,0 +1,1 @@
+../../../../../crm_app/my_flutter/.ios/Flutter/.symlinks/flutter_aj_qrscan/ios/Classes/BarcodeScannerViewControllerDelegate.h

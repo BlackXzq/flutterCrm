@@ -1,0 +1,1 @@
+../../../../../crm_app/my_flutter/.ios/Flutter/.symlinks/connectivity/ios/Classes/ConnectivityPlugin.h
