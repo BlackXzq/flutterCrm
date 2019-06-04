@@ -1,0 +1,74 @@
+public getLocalProperties(String name) {
+    def proFile = file(rootDir.absolutePath + "/local.properties")
+    Properties p = new Properties()
+    proFile.withInputStream { stream ->
+        p.load(stream)
+    }
+    String res = p.getProperty(name);
+
+    if (null == res) {
+        throw new Exception("请手动设置 local.properties ")
+    }
+    return res;
+}
+
+ext {
+    //设备类型
+    DEVICE_UBX = "UBX";//优博讯
+
+    //在此配置 TODO
+    DEVICE_TYPE = DEVICE_UBX;//优博讯
+
+    //打印机类型
+//    PRINT_SPRT = "SPRT";
+//    PRINT_ZK = "ZK";//芝柯
+//    //在此配置 TODO
+//    PRINT_TYPE = PRINT_ZK;
+
+    //友盟 Key
+    Umeng_Product = "597afa3cb27b0a24c1001a57";//生产
+    Umeng_Test = "5b976e95f29d9848340000e9";//非生产
+
+    //高德Map Key
+    UBXMapKey = "8faec20566f4c03dd9867f74dac3805c";//优博讯
+
+    //如果有变动请修改build.gradle的getUrlList方法
+    E_TEST = "http://10.108.10.102:18060/";//测试环境
+    E_TEST2 = "http://10.108.6.116:18060/";//测试环境2
+    E_OMSTEST = "http://10.108.6.113:18060/";//oms测试环境
+    E_GATEWAY = "http://10.108.10.61:18060/";//网关
+    E_UAT = "http://fts-uat-1-911332981.cn-north-1.elb.amazonaws.com.cn/uatapi/";//UAT1
+    E_UAT2 = "http://fts-uat-2-910766395.cn-north-1.elb.amazonaws.com.cn/uat2api/";//UAT2
+    E_UAT_STRESS = "http://test-fts-stress-elb-1543973257.cn-north-1.elb.amazonaws.com.cn/api/";//压测
+    E_PRODUCT = "http://prod-elb-fts-1150418268.cn-north-1.elb.amazonaws.com.cn/api/";//生产
+
+    //如果有变动请修改build.gradle的getUrlNameList方法
+    E_TEST_NAME = "测试环境";//测试环境
+    E_TEST2_NAME = "测试环境2";//测试环境2
+    E_OMSTEST_NAME = "oms测试环境";
+    E_GATEWAY_NAME = "开发网关";//网关
+    E_UAT_NAME = "UAT1";//UAT1
+    E_UAT2_NAME = "UAT2";//UAT2
+    E_UAT_STRESS_NAME = "压测";//压测
+    E_PRODUCT_NAME = "生产";//生产
+
+    AndroidSupportVersion = "25.3.1"
+
+    MIN_SDK_VERSION = 16
+    TARGET_SDK_VERSION = 25
+    BUILD_TOOLS_VERSION = "25.0.0"
+    COMPILE_SDK_VERSION = 25
+
+    VERSION_CODE=20
+    VERSION_NAME="1.1.9"
+
+    PUBLISHKEYSTORE = getLocalProperties("key_store")
+    PUBLISHKEYSTOREPASS = getLocalProperties("key_store_password")
+    PUBLISHKEYPASS = getLocalProperties("key_alias_password")
+    PUBLISHKEYALIAS = getLocalProperties("key_alias");
+}
+task printSigningConfigs() {
+    println("-------------------------------------------------------------------")
+    println("生产版本签名文件:" + rootProject.ext.PUBLISHKEYSTORE)
+    println("-------------------------------------------------------------------")
+}

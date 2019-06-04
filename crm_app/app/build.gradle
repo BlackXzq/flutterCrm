@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.anji.plus.crm"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.0"
+	multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+        abortOnError false
+        ignoreWarnings true
+        disable 'MissingTranslation'
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(rootProject.ext.PUBLISHKEYSTORE)
+            storePassword rootProject.ext.PUBLISHKEYSTOREPASS
+            keyAlias rootProject.ext.PUBLISHKEYALIAS
+            keyPassword rootProject.ext.PUBLISHKEYPASS
+        }
+        debug {
+
+        }
+    }
+
+    buildTypes {
+        release {
+            ndk {
+                abiFilters "armeabi-v7a"
+            }
+//            minifyEnabled true
+//            zipAlignEnabled true
+//            shrinkResources true
+              zipAlignEnabled true
+              minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            ndk {
+                abiFilters "armeabi-v7a", "x86"
+            }
+            zipAlignEnabled true
+            minifyEnabled false
+        }
+
+    }
+
+    sourceSets {
+
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main/resources']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+            jniLibs.srcDirs = ['libs']
+        }
+
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    //65535
+    implementation 'com.android.support:multidex:1.0.3'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    implementation project(':flutter')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+}
